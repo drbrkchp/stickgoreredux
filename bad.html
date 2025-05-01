@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bad</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace; /* Classic '90s font */
+            margin: 0;
+            padding: 20px;
+            background: url('stars.jpg') no-repeat center center fixed; /* Background stars image */
+            background-size: cover; /* Cover the entire background */
+            color: #ffffff; /* White text for visibility against dark background */
+            position: relative; /* Required for absolute positioning of earth */
+        }
+
+        /* Earth image as a background element */
+        .earth {
+            position: absolute;
+            bottom: 60%; /* Move it higher, between the header and the main content */
+            right: 10%; /* Keep the same right positioning */
+            width: 150px; /* Set the size of the earth image */
+            opacity: 0.6; /* Make it semi-transparent */
+            z-index: -1; /* Place it behind all other content */
+            border: none; /* Remove the border */
+        }
+
+        h1, h2, h3 {
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            color: #FF00FF; /* Bright 90s color */
+            text-shadow: 1px 1px 1px #000000;
+        }
+
+        h1 {
+            background-color: #FFFF00;
+            border: 3px dashed #0000FF;
+            padding: 10px;
+        }
+
+        h2 {
+            color: #FF0000;
+            border-bottom: 2px solid #0000FF;
+        }
+
+        h3 {
+            color: #008000;
+        }
+
+        p {
+            font-size: 14px;
+            color: #ffffff; /* White text for visibility */
+        }
+
+        a {
+            color: #00FFFF; /* Bright cyan for links */
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        img {
+            padding: 5px; /* Retain padding for other images */
+        }
+
+        /* Special '90s effect for text */
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        h6 {
+            font-size: 12px;
+            color: #FF0000;
+            background-color: #FFFF00;
+            border: 2px solid #000000;
+            padding: 5px;
+            animation: blink 1s infinite; /* '90s blinking effect */
+        }
+    </style>
+
+    <!-- Ruffle JS for Flash emulation -->
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+
+<body>
+    <img class="earth" src="earth.png" alt="Earth" />
+    <p><a href="/index">sod off</a></p>
+    <h1>welcome to my game site</h1>
+
+    <!-- Embed Flash using Ruffle -->
+    <div>
+        <object type="application/x-shockwave-flash" data="https://files.catbox.moe/8pvo6v.swf" width="360" height="360">
+            <param name="movie" value="https://files.catbox.moe/8pvo6v.swf" />
+            <param name="quality" value="high" />
+            <param name="play" value="true" />
+            <param name="loop" value="true" />
+        </object>
+    </div>
+    
+    <h1>To all school admins trying to block this website, you guys are doing a horrible job, it's as secure as Fort Knox so I don't know what yall are wasting your time on (:</h1>
+    
+    <h1>Normal Games</h1>
+    <p><a href="/ego">eaglercraft (PC)</a></p>
+    <p><a href="/egomobile">eaglercraft (ipad)</a></p>
+    <p><a href="2048/game">2048</a></p>
+    <p><a href="/egoexperimental">eaglercraft multiplayer (PC)</a></p>
+    <p><a href="/egoexperimentalmobile">eaglercraft multiplayer (ipad)</a></p>
+
+    <!-- New Section for Assassin Series -->
+    <h1>Assassin Series</h1>
+    <p><a href="assassin/puffy">Puff-Daddy Punchout (p diddy boxing game)</a></p>
+
+    <h1>TI-30XIIS Calculator Games</h1>
+
+    <h2>Random Randy</h2>
+
+    <h3>How to play:</h3>
+    <p>Guess a number in your head between 1 to 10 and hit the "=" button, if the output number is the number you guessed, you win.</p>
+
+    <h3>How to setup:</h3>
+    <p>Make sure to hit the clear button so everything is clean, hit B and press the left arrow, then hit enter, in between the parenthesis, press the buttons in the following order: 1, 2nd, ), 1, and 0, then you should be good to go, the equation should look like the following: randi(1,10)</p>
+    
+    <h1>Other Crap</h1>
+    <p><a href="/music">Music</a></p>    
+
+    <h6>you can't block the unblockable</h6>
+</body>
+</html>
