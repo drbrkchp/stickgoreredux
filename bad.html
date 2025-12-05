@@ -14,7 +14,6 @@
             position: relative;
             line-height: 1.5;
         }
-
         .container {
             max-width: 700px;
             margin: auto;
@@ -23,7 +22,6 @@
             border-radius: 10px;
             backdrop-filter: blur(3px);
         }
-
         .earth {
             position: absolute;
             bottom: 60%;
@@ -33,20 +31,17 @@
             z-index: -1;
             border: none;
         }
-
         h1, h2, h3 {
             font-family: "Comic Sans MS", "Comic Sans", cursive;
             color: #FF00FF;
             text-shadow: 1px 1px 1px #000000;
         }
-
         h1 {
             background-color: #FFFF00;
             border: 3px dashed #0000FF;
             padding: 10px;
             margin-top: 40px;
         }
-
         h6 {
             font-size: 12px;
             color: #FF0000;
@@ -56,52 +51,48 @@
             animation: blink 1s infinite;
             width: max-content;
         }
-
         @keyframes blink {
             50% { opacity: 0; }
         }
-
         a {
             color: #00FFFF;
             text-decoration: underline;
             font-weight: bold;
         }
-
     </style>
-
 </head>
 <body>
     
-
     <img class="earth" src="earth.png" alt="Earth" />
-
     <div class="container">
         <p><a href="/stickgoreredux/index">sod off</a></p>
-
         <h1>how come the admins haven't blocked ts yet? oh and it got redesigned :D</h1>
-
         <h1>Normal Games</h1>
         <p><a href="/stickgoreredux/ego">eaglercraft (PC)</a></p>
         <p><a href="/stickgoreredux/egomobile">eaglercraft (ipad)</a></p>
         <p><a href="/stickgoreredux/2048/game">2048</a></p>
         <p><a href="/stickgoreredux/egoexperimental">eaglercraft multiplayer (PC)</a></p>
         <p><a href="/stickgoreredux/egoexperimentalmobile">eaglercraft multiplayer (ipad)</a></p>
-
         <h1>Wrestling Games</h1>
         <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/wwf">WWF No Mercy</a></p>
         <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/wcw">WCW/nWo Revenge</a></p>
         <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/ecw">ECW House Party [MOD]</a></p>
         <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/vpw2">Virtual Pro Wrestling 2 Freem [MOD]</a></p>
-
         <h1>[NEW] Skate Games</h1>
         <p><a href="https://drbrkchp.github.io/stickgoreredux/thps1">Tony Hawk's Pro Skater</a></p>
-
         <h6>MOTM: i hate the cold :p</h6>
     </div>
 <script>
     const music = new Audio("Aim feat. YZ - Ain't Got Time To Waste [Instrumental].mp3");
     music.loop = true;
-    music.play();
+    
+    // Auto-play with user interaction fallback
+    music.play().catch(() => {
+        // If autoplay is blocked, play on first user interaction
+        document.body.addEventListener('click', () => {
+            music.play();
+        }, { once: true });
+    });
 </script>
 </body>
 </html>
