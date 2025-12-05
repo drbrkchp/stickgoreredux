@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
     <title>bad</title>
     <style>
         body {
-            font-family: "Courier New", Courier, monospace; /* Classic '90s font */
+            font-family: "Courier New", Courier, monospace;
             margin: 0;
             padding: 20px;
-            background: url('stars.jpg') no-repeat center center fixed; /* Background stars image */
-            background-size: cover; /* Cover the entire background */
-            color: #ffffff; /* White text for visibility against dark background */
-            position: relative; /* Required for absolute positioning of earth */
+            background: url('stars.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            position: relative;
+            line-height: 1.5;
         }
 
-        /* Earth image as a background element */
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(3px);
+        }
+
         .earth {
             position: absolute;
-            bottom: 60%; /* Move it higher, between the header and the main content */
-            right: 10%; /* Keep the same right positioning */
-            width: 150px; /* Set the size of the earth image */
-            opacity: 0.6; /* Make it semi-transparent */
-            z-index: -1; /* Place it behind all other content */
-            border: none; /* Remove the border */
+            bottom: 60%;
+            right: 10%;
+            width: 150px;
+            opacity: 0.6;
+            z-index: -1;
+            border: none;
         }
 
         h1, h2, h3 {
             font-family: "Comic Sans MS", "Comic Sans", cursive;
-            color: #FF00FF; /* Bright 90s color */
+            color: #FF00FF;
             text-shadow: 1px 1px 1px #000000;
         }
 
@@ -34,35 +44,7 @@
             background-color: #FFFF00;
             border: 3px dashed #0000FF;
             padding: 10px;
-        }
-
-        h2 {
-            color: #FF0000;
-            border-bottom: 2px solid #0000FF;
-        }
-
-        h3 {
-            color: #008000;
-        }
-
-        p {
-            font-size: 14px;
-            color: #ffffff; /* White text for visibility */
-        }
-
-        a {
-            color: #00FFFF; /* Bright cyan for links */
-            text-decoration: underline;
-            font-weight: bold;
-        }
-
-        img {
-            padding: 5px; /* Retain padding for other images */
-        }
-
-        /* Special '90s effect for text */
-        @keyframes blink {
-            50% { opacity: 0; }
+            margin-top: 40px;
         }
 
         h6 {
@@ -71,63 +53,67 @@
             background-color: #FFFF00;
             border: 2px solid #000000;
             padding: 5px;
-            animation: blink 1s infinite; /* '90s blinking effect */
+            animation: blink 1s infinite;
+            width: max-content;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        a {
+            color: #00FFFF;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        .flash-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        ruffle-player {
+            width: 360px;
+            height: 360px;
+            border: 3px solid #FF00FF;
+            border-radius: 10px;
+            background: #000;
         }
     </style>
 
-    <!-- Ruffle JS for Flash emulation -->
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 </head>
-
 <body>
     <img class="earth" src="earth.png" alt="Earth" />
-    <p><a href="/index">sod off</a></p>
-    <h1>welcome to my game site</h1>
 
-    <!-- Embed Flash using Ruffle -->
-    <div>
-        <object type="application/x-shockwave-flash" data="atomknew.swf" width="360" height="360">
-            <param name="movie" value="atomknew.swf" />
-            <param name="quality" value="high" />
-            <param name="play" value="true" />
-            <param name="loop" value="true" />
-        </object>
+    <div class="container">
+        <p><a href="/index">sod off</a></p>
+        <h1>welcome to my game site</h1>
+
+        <div class="flash-wrapper">
+            <ruffle-player autoplay="on" loop="on" src="atomknew.swf"></ruffle-player>
+        </div>
+
+        <h1>how come the admins haven't blocked ts yet? oh and it got redesigned :D</h1>
+
+        <h1>Normal Games</h1>
+        <p><a href="/stickgoreredux/ego">eaglercraft (PC)</a></p>
+        <p><a href="/stickgoreredux/egomobile">eaglercraft (ipad)</a></p>
+        <p><a href="/stickgoreredux/2048/game">2048</a></p>
+        <p><a href="/stickgoreredux/egoexperimental">eaglercraft multiplayer (PC)</a></p>
+        <p><a href="/stickgoreredux/egoexperimentalmobile">eaglercraft multiplayer (ipad)</a></p>
+
+        <h1>Wrestling Games</h1>
+        <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/wwf">WWF No Mercy</a></p>
+        <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/wcw">WCW/nWo Revenge</a></p>
+        <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/ecw">ECW House Party [MOD]</a></p>
+        <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/vpw2">Virtual Pro Wrestling 2 Freem [MOD]</a></p>
+
+        <h1>[NEW] Skate Games</h1>
+        <p><a href="https://drbrkchp.github.io/stickgoreredux/thps1">Tony Hawk's Pro Skater</a></p>
+
+        <h6>MOTM: i hate the cold :p</h6>
     </div>
-    
-    <h1>To all school admins trying to block this website, you guys are doing a horrible job, it's as secure as Fort Knox so I don't know what yall are wasting your time on (:</h1>
-    
-    <h1>Normal Games</h1>
-    <p><a href="/stickgoreredux/ego">eaglercraft (PC)</a></p>
-    <p><a href="/stickgoreredux/egomobile">eaglercraft (ipad)</a></p>
-    <p><a href="/stickgoreredux/2048/game">2048</a></p>
-    <p><a href="/stickgoreredux/egoexperimental">eaglercraft multiplayer (PC)</a></p>
-    <p><a href="/stickgoreredux/egoexperimentalmobile">eaglercraft multiplayer (ipad)</a></p>
-
-    <h1>[NEW!] Wrestling Games</h1>
-    <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/wwf">WWF No Mercy</a></p>
-    <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/wcw">WCW/nWo Revenge</a></p>
-    <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/ecw">ECW House Party [MOD]</a></p>
-    <p><a href="https://drbrkchp.github.io/stickgoreredux/Emulators/vpw2">Virtual Pro Wrestling 2 Freem [MOD]</a></p>
-
-
-    <!-- New Section for Assassin Series -->
-    <h1>Assassin Series</h1>
-    <p><a href="/stickgoreredux/assassin/puffy">Puff-Daddy Punchout (p diddy boxing game)</a></p>
-
-    <h1>TI-30XIIS Calculator Games</h1>
-
-    <h2>Random Randy</h2>
-
-    <h3>How to play:</h3>
-    <p>Guess a number in your head between 1 to 10 and hit the "=" button, if the output number is the number you guessed, you win.</p>
-
-    <h3>How to setup:</h3>
-    <p>Make sure to hit the clear button so everything is clean, hit B and press the left arrow, then hit enter, in between the parenthesis, press the buttons in the following order: 1, 2nd, ), 1, and 0, then you should be good to go, the equation should look like the following: randi(1,10)</p>
-    
-    <h1>Other Crap</h1>
-    <p><a href="/stickgoreredux/music">Music</a></p>    
-
-    <h6>you can't block the unblockable</h6>
 </body>
 </html>
-
